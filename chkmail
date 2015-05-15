@@ -1,7 +1,7 @@
 #!/bin/bash
-# $Id: chkmail,v 1.188 2015/05/15 15:09:30 fulford Exp fulford $
+# $Id: chkmail,v 1.189 2015/05/15 15:48:56 fulford Exp fulford $
 # $Source: /src/merlin/usr/local/etc/RCS/chkmail,v $
-# $Revision: 1.188 $
+# $Revision: 1.189 $
 # Author C W Fulford.
 # Copyright 2014-2015 (c) C W Fulford.
 # Licensed for public use under the LGPL, .
@@ -25,7 +25,7 @@ while [ $# -gt 0 ] ;do
 		-p) port=$2>>$tmp;shift 2;;
 		-u) echo "user=$2">>$tmp;shift 2;;
 		-v) verbose=:;nl="\\n";shift;;
-		-V) echo "$cmd $Revision: 1.188 $ $Date: 2015/05/15 15:09:30 $"|awk '{print $1,$3,$6}';exit;;  
+		-V) echo "$cmd $Revision: 1.189 $ $Date: 2015/05/15 15:48:56 $"|awk '{print $1,$3,$6}';exit;;  
 		-w) echo "warn=$2">>$tmp;shift 2;;
 		-x) expunge=:;shift;;
 		-*) echo "syntax: $syntax">&2;exit 1;;
@@ -51,7 +51,7 @@ case $port in
 	22) proto=ssh;;
 	143) proto=imap;;
 	993) proto=ssl;;
-	"") port=22;proto=ssh;echo "$cmd: using port 22." >&2;;
+	"") port=22;proto=ssh;[ "$verbose" ] && echo "$cmd: using port 22." >&2;;
 	*) echo "$cmd: proceedure for $port not known." >&2;exit;;
 esac
 
