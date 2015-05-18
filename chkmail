@@ -1,7 +1,7 @@
 #!/bin/bash
-# $Id: chkmail,v 1.198 2015/05/18 18:28:29 fulford Exp fulford $
+# $Id: chkmail,v 1.199 2015/05/18 18:56:25 fulford Exp fulford $
 # $Source: /src/merlin/usr/local/etc/RCS/chkmail,v $
-# $Revision: 1.198 $
+# $Revision: 1.199 $
 # Author C W Fulford.
 # Copyright 2014-2015 (c) C W Fulford.
 # Licensed for public use under the LGPL, .
@@ -25,7 +25,7 @@ while [ $# -gt 0 ] ;do
 		-p) port=$2>>$tmp;shift 2;;
 		-u) echo "user=$2">>$tmp;shift 2;;
 		-v) verbose=:;nl="\\n";shift;;
-		-V) echo "$cmd $Revision: 1.198 $ $Date: 2015/05/18 18:28:29 $"|awk '{print $1,$3,$6}';exit;;  
+		-V) echo "$cmd $Revision: 1.199 $ $Date: 2015/05/18 18:56:25 $"|awk '{print $1,$3,$6}';exit;;  
 		-w) echo "warn=$2">>$tmp;shift 2;;
 		-x) expunge=:;shift;;
 		-*) echo "syntax: $syntax">&2;exit 1;;
@@ -111,7 +111,7 @@ for m in $mbox $folders ;do
 			echo  "Warning: ${user}'s $m on $srvr has $total messages" >&2
 		fi
 	       	[ "$log" ] && {
-		  	logger -p mail.notice -t $cmd: "$user $m on $srvr checked. $total mesgs"
+		  	logger -p mail.notice -t $cmd "total messages for $user $m on $srvr."
 		}
 
 			
@@ -141,8 +141,8 @@ for m in $mbox $folders ;do
 		   expect -f $del_msgs $srvr $proto  $addr $m "$passwd" $del
 		   total=`expr $total - $del`
 		     [ "$log" ] &&{
-		       	logger -t $cmd -p mail.notice "$del messages deleted for $user $mbx at $srvr."
-		  	logger -p mail.notice -t $cmd "$user $m on $srvr checked. $total mesgs"
+		       	logger -t $cmd -p mail.notice "$del messages deleted for $user $m at $srvr."
+		  	logger -p mail.notice -t $cmd "$total messages for $user $m at $srvr."
 		      }
 		      [ $verbose ] &&{
 		      	s=s;[ $del -eq 1 ] && s=""
@@ -153,7 +153,7 @@ for m in $mbox $folders ;do
 	else
 		[ "$verbose" ] && echo "$cmd: $user $mbx not found."
 		[ "$log" ] && {
-			logger -p mail.notice -t $cmd "$user $mbx on $srvr checked. Not found!"
+			logger -p mail.notice -t $cmd "$user $mbx at $srvr. Not found!"
 		}
 
 	fi
