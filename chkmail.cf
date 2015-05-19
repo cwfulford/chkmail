@@ -66,6 +66,8 @@ charlie:
 	srvr=imap.dougal.roundabout.com
 	passwd=pasSword4u
 	alert=fulford@fulford.net
+	folders="INBOX.Spam"
+	
 
 communications:
 	addr=communications@snap.dragon.co.uk
@@ -76,6 +78,7 @@ elise:
 	addr=elise.smythe@dougal-dog.co.uk
 	srvr=imap.dougal.roundabout.com
 	passwd=pasSword4u
+	folders="INBOX.Spam"
 
 fulford-snap:
 	addr=fulford@snap.dragon.co.uk
@@ -148,16 +151,19 @@ jane-snap:
 	addr=jane.furborough@snap.dragon.co.uk
 	srvr=imap.dougal.roundabout.com
 	passwd=pasSword4u
+	folders="INBOX.Spam"
 
 jane:
 	addr=jane.furborough@dougal-dog.co.uk
 	srvr=imap.dougal.roundabout.com
 	passwd=pasSword4u
+	folders="INBOX.Spam"
 
 joan:
 	addr=joan.hynd@snap.dragon.co.uk
 	srvr=imap.dougal.roundabout.com
 	passwd=pasSword4u
+	folders="INBOX.Spam"
 
 marketing:
 	addr=marketing@snap.dragon.co.uk
@@ -168,11 +174,13 @@ natalie-snap:
 	addr=natalie.points@snap.dragon.co.uk
 	srvr=imap.dougal.roundabout.com
 	passwd=pasSword4u
+	folders="INBOX.Spam"
 
 natalie:
 	addr=natalie.points@dougal-dog.co.uk
 	srvr=imap.dougal.roundabout.com
 	passwd=pasSword4u
+	folders="INBOX.Spam"
 
 noreply:
 	addr=noreply@dougal-dog.co.uk
@@ -189,18 +197,21 @@ sahara-snap:
 	srvr=imap.dougal.roundabout.com
 	passwd=pasSword4u
 	alert=fulford@fulford.net
+	folders="INBOX.Spam"
 
 sahara-total:
 	addr=sahara.hoover@total-dog.co.uk
 	srvr=imap.dougal.roundabout.com
 	passwd=pasSword4u
 	alert=fulford@fulford.net
+	folders="INBOX.Spam"
 
 sahara:
 	addr=sahara.hoover@dougal-dog.co.uk
 	srvr=imap.dougal.roundabout.com
 	passwd=pasSword4u
 	alert=fulford@fulford.net
+	folders="INBOX.Spam"
 
 twitter:
 	addr=twitter@dougal-dog.co.uk
@@ -213,6 +224,7 @@ saharap-snap:
 	srvr=imap.dougal.roundabout.com
 	passwd=pasSword4u
 	alert=fulford@fulford.net
+	folders="INBOX.Spam"
 
 tenderdocs:
 	addr=tenderdocs@snap.dragon.co.uk
