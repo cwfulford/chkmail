@@ -44,7 +44,7 @@ judy-snap:
 	passwd=pasSword4u
 	warn=1000
 	alert=fulford@fulford.net
-	folders="INBOX.Spam"
+	folders="INBOX.Spam,INBOX.Archive.2013"
 
 judy:
 	addr=judy.drench@dougal-dog.co.uk
