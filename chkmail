@@ -1,7 +1,7 @@
 #!/bin/bash
-# $Id: chkmail,v 1.212 2015/05/20 17:38:37 fulford Exp fulford $
+# $Id: chkmail,v 1.213 2015/05/20 17:41:48 fulford Exp fulford $
 # $Source: /src/merlin/usr/local/etc/RCS/chkmail,v $
-# $Revision: 1.212 $
+# $Revision: 1.213 $
 # Author C W Fulford.
 # Copyright 2014-2015 (c) C W Fulford.
 # Licensed for public use under the LGPL, .
@@ -41,7 +41,7 @@ while [ $# -gt 0 ] ;do
 		-p) port=$2>>$tmp;shift 2;;
 		-u) echo "user=$2">>$tmp;shift 2;;
 		-v) verbose=:;nl="\\n";shift;;
-		-V) echo "$cmd $Revision: 1.212 $ $Date: 2015/05/20 17:38:37 $"|awk '{print $1,$3,$6}';exit;;  
+		-V) echo "$cmd $Revision: 1.213 $ $Date: 2015/05/20 17:41:48 $"|awk '{print $1,$3,$6}';exit;;  
 		-w) echo "warn=$2">>$tmp;shift 2;;
 		-*) echo "syntax: $syntax">&2;exit 1;;
 	         *) id=$1;shift;;
@@ -138,7 +138,7 @@ for m in $mbox $folders ;do
 			echo  "Warning: ${user}'s $m on $srvr has $total messages" >&2
 		fi
 	       	[ "$log" ] && {
-		  	logger -p mail.notice -t $cmd "$total messages for $user $m at $srvr."
+		  	logger -p mail.notice -t $cmd "$total messages in $user $m at $srvr."
 		}
 
 			
@@ -169,7 +169,7 @@ for m in $mbox $folders ;do
 		   total=`expr $total - $del`
 		     [ "$log" ] &&{
 		       	logger -p mail.notice -t $cmd "$del messages deleted for $user $m at $srvr."
-		  	logger -p mail.notice -t $cmd "$total messages for $user $m at $srvr."
+		  	logger -p mail.notice -t $cmd "$total messages in $user $m at $srvr."
 		      }
 		      [ $verbose ] &&{
 		      	s=s;[ $del -eq 1 ] && s=""
