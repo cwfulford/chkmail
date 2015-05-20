@@ -1,4 +1,4 @@
-.TH CHKMAIL 8l "28th April 2015 r1.214
+.TH CHKMAIL 8l "28th April 2015 r1.215
 .SH NAME
 .B chkmail
 - checks the availability of a mail account on a remote IMAP server and 
