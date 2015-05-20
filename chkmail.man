@@ -1,4 +1,4 @@
-.TH CHKMAIL 8l "28th April 2015 r1.213
+.TH CHKMAIL 8l "28th April 2015 r1.214
 .SH NAME
 .B chkmail
 - checks the availability of a mail account on a remote IMAP server and 
@@ -8,13 +8,14 @@ the threshold may be deleted.
 .SH SYNOPSIS
 \fBchkmail\fR
 [\fB-a \fI<mail_addr\fR]
+[\fB-b \fI<mail_box>\fR]
 [\fB-c \fI<config_file>\fR]
 [\fB-d\fR]
 [\fB-f\fR]
 [\fB-i \fI<imap_server>\fR]
 [\fB-L \fR]
 [\fB-l \fR]
-[\fB-m \fI<mailbox>\fR]
+[\fB-m \fI<#max>\fR]
 [\fB-n \fR]
 [\fB-P \fI<passwd>\fR]
 [\fB-p \fI<port_no>\fR]
@@ -60,6 +61,10 @@ given here or sent with the \fB-u\fR option below.
 .B NB
 The command line options supercede the configuration file settings.
 .TP 5
+\fB-b \fI<mailbox>\fR
+Count the number of messages in the nominated mailboxes. The option is redundant
+if the mailbox id is used.
+.TP 5
 .B -c
 Use the specified configuration file in preference to the default
 \fI"/usr/local/etc/chkmail.cf"\fR.
@@ -89,10 +94,18 @@ List the available mailboxes for this mail user account.
 .B -l
 Use the local syslog facility to log that the check has been made and 
 record the number of messages returned.
-.TP 5
-\fB-m \fI<mailbox>\fR
-Count the number of messages in the nominated mailboxes. The option is redundant
-if the mailbox id is used.
+.TP
+\fB-m\fI <#_max_no_of messages>\fR
+Sets the threshold for the number of messages a mail box may hold before
+a warning is issued. If the 
+.B -n
+option is used warning message will be sent by e-mail to the mail box owner or
+the person defined in the configuration file with the \fIalert\fR equate, a
+warning is also printed to standard error.
+.IP
+The warning threshold may also be set in the configuration file but will be
+over ridden by the value set here.
+.IP
 .TP 5
 \fB-n\fR
 Notify the user if they have exceeded the warning threshold for the number of
@@ -159,18 +172,6 @@ equals or exceeds the trigger value for warnings. With the
 option 
 .B chkmail
 always reports the checking of a mail box and the number of messages found.
-.TP 5
-\fB-w\fI <#_no_of messages>\fR
-Sets the threshold for the number of messages a mail box may hold before
-a warning is issued. If the 
-.B -n
-option is used warning message will be sent by e-mail to the mail box owner or
-the person defined in the configuration file with the \fIalert\fR equate, a
-warning is also printed to standard error.
-.IP
-The warning threshold may also be set in the configuration file but will be
-over ridden by the value set here.
-.IP
 .TP 5
 <\fIconfig_id\fR>
 The configuration identity is the key to the stanza in the configuration
