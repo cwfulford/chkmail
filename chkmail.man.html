@@ -38,8 +38,8 @@ threshold may be deleted.</p>
 [<b>-P</b> <i>&lt;passwd&gt;</i>] [<b>-p</b>
 <i>&lt;port_no&gt;</i>] [<b>-u</b>
 <i>&lt;login_name&gt;</i>] [<b>-v</b> ] [<b>-w</b>
-<i>&lt;#_messages&gt;</i>] [<b>-x</b> ]
-[<i>config_id&gt;</i>] | [<b>-V</b> ]</p>
+<i>&lt;#_messages&gt;</i>] [<i>config_id&gt;</i>] |
+[<b>-V</b> ]</p>
 
 <h2 id="heading3">AVAILABILITY
 </h2>
@@ -305,35 +305,6 @@ equate, a warning is also printed to standard error.</p>
 <p style="margin-left:18%; margin-top: 1em">The warning
 threshold may also be set in the configuration file but will
 be over ridden by the value set here.</p>
-
-<p style="margin-left:18%; margin-top: 1em">If used with
-the <b>-x</b> option the excess messages will be
-deleted.</p>
-
-<table width="100%" border="0" rules="none" frame="void"
-       cellspacing="0" cellpadding="0">
-<colgroup><col width="11%"></col>
-<col width="3%"></col>
-<col width="4%" class="center"></col>
-<col width="82%"></col>
-</colgroup>
-<tr valign="top" align="left">
-<td></td>
-<td>
-
-
-<p><b>-x</b></p></td>
-<td></td>
-<td>
-
-
-<p>To be used with great caution the <b>-x</b> option
-expunges all messages exceeding the warning threshold. The
-option was introduced when I discovered that a client had
-48.5 thousand messages in an un-monitored INBOX and was no
-longer able to access or delete messages with the locally
-available mail clients.</p></td></tr>
-</table>
 
 <p style="margin-left:11%;">&lt;<i>config_id</i>&gt;</p>
 
