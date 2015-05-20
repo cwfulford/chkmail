@@ -1,5 +1,5 @@
 #!/bin/bash
-# $Id: chkmail,v 1.215 2015/05/20 19:00:59 fulford Exp fulford $
+# $Id: chkmail,v 1.215 2015/05/20 19:00:59 fulford Exp $
 # $Source: /src/merlin/usr/local/etc/RCS/chkmail,v $
 # $Revision: 1.215 $
 # Author C W Fulford.
