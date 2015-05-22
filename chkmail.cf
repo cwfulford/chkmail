@@ -48,14 +48,16 @@ judy.drench@snap.dragon.co.uk:
 	folders="INBOX.Spam .Archive"
 
 judy:
+judy.drench@dougal-dog.co.uk:
 	addr=judy.drench@dougal-dog.co.uk
 	srvr=imap.dougal.roundabout.com
 	passwd=pasSword4u
 	alert=fulford@fulford.net
-	folders="INBOX.Spam"
+	folders="INBOX.Spam .Archive"
 
 
 judy-paddll:
+judy.drench@paddll.co.uk:
 	addr=judy.drench@paddll.co.uk
 	srvr=imap.dougal.roundabout.com
 	passwd=pasSword4u
@@ -63,6 +65,7 @@ judy-paddll:
 	folders="INBOX.Spam"
 
 charlie:
+charlie.syelaid@dougal-dog.co.uk:
 	addr=charlie.syelaid@dougal-dog.co.uk
 	srvr=imap.dougal.roundabout.com
 	passwd=pasSword4u
