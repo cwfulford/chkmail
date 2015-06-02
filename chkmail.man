@@ -1,4 +1,4 @@
-.TH CHKMAIL 8l "28th April 2015 r1.219
+.TH CHKMAIL 8l "28th April 2015 r1.220
 .SH NAME
 .B chkmail
 - checks the availability of a mail account on a remote IMAP server and 
@@ -11,7 +11,6 @@ the threshold may be deleted.
 [\fB-b \fI<mail_box>\fR]
 [\fB-c \fI<config_file>\fR]
 [\fB-d\fR]
-[\fB-f\fR]
 [\fB-i \fI<imap_server>\fR]
 [\fB-L \fR]
 [\fB-l \fR]
