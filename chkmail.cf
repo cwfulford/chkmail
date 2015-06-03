@@ -43,7 +43,7 @@ judy.drench@snap.dragon.co.uk:
 	addr=judy.drench@snap.dragon.co.uk
 	srvr=imap.dougal.roundabout.com
 	passwd=pasSword4u
-	max=1000
+	max=3100
 	alert=fulford@fulford.net
 	folders="INBOX.Spam .Archive"
 
@@ -67,6 +67,7 @@ judy.drench@paddll.co.uk:
 charlie:
 charlie.syelaid@dougal-dog.co.uk:
 	addr=charlie.syelaid@dougal-dog.co.uk
+	max=2900
 	srvr=imap.dougal.roundabout.com
 	passwd=pasSword4u
 	alert=fulford@fulford.net
