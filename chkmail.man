@@ -3,8 +3,8 @@
 .B chkmail
 - checks the availability of a mail account on a remote IMAP server and 
 optionaly prints and or logs the number of messages in the nominated mailboxes.
-A warning threshold may be set for the number of messages and messages exceeding
-the threshold may be deleted.
+A warning threshold may be set. The mailbox user and/or administrators may
+be advised if the number of messages exceeds the threshold set.
 .SH SYNOPSIS
 \fBchkmail\fR
 [\fB-a \fI<mail_addr\fR]
