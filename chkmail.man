@@ -21,7 +21,7 @@ the threshold may be deleted.
 [\fB-u \fI<login_name>\fR]
 [\fB-v \fR]
 [\fB-w \fI<#_messages>\fR]
-[\fIconfig_id>\fR] |
+[\fIconfig_id>|"ALL"\fR] |
 [\fB-V \fR]
 .br
 .SH AVAILABILITY
@@ -172,7 +172,7 @@ option
 .B chkmail
 always reports the checking of a mail box and the number of messages found.
 .TP 5
-<\fIconfig_id\fR>
+<\fIconfig_id|"ALL"\fR>
 The configuration identity is the key to the stanza in the configuration
 file which will be used to determine the values to be used by the script.
 The configuration equates recognised by the scripts are:
@@ -187,6 +187,10 @@ warn      Trigger value for e-mail alerts.
 folders   The mailbox folders to be checked.
 .ft R
 .fi
+The id "ALL" is special and causes 
+.B chkmail
+to scan the chkmail file to compile a list of all the available  ids and
+to check each one in turn.
 .TP 5
 \fB-V\fR Print the version details and exit.
 .SH FILES

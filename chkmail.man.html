@@ -38,8 +38,8 @@ threshold may be deleted.</p>
 [<b>-m</b> <i>&lt;#max&gt;</i>] [<b>-n</b> ] [<b>-P</b>
 <i>&lt;passwd&gt;</i>] [<b>-p</b> <i>&lt;port_no&gt;</i>]
 [<b>-u</b> <i>&lt;login_name&gt;</i>] [<b>-v</b> ]
-[<b>-w</b> <i>&lt;#_messages&gt;</i>] [<i>config_id&gt;</i>]
-| [<b>-V</b> ]</p>
+[<b>-w</b> <i>&lt;#_messages&gt;</i>]
+[<i>config_id&gt;|&quot;ALL&quot;</i>] | [<b>-V</b> ]</p>
 
 <h2 id="heading3">AVAILABILITY
 </h2>
@@ -306,7 +306,8 @@ reports the checking of a mail box and the number of
 messages found.</p></td></tr>
 </table>
 
-<p style="margin-left:11%;">&lt;<i>config_id</i>&gt;</p>
+
+<p style="margin-left:11%;">&lt;<i>config_id|&quot;ALL&quot;</i>&gt;</p>
 
 <p style="margin-left:18%;">The configuration identity is
 the key to the stanza in the configuration file which will
@@ -320,6 +321,11 @@ alert     Recipient address for alerts.
 warn      Trigger value for e-mail alerts.
 folders   The mailbox folders to be checked.</pre>
 
+
+<p style="margin-left:18%;">The id &quot;ALL&quot; is
+special and causes <b><a href="./scripts.php?script=chkmail">chkmail</a></b> to scan the <a href="./scripts.php?script=chkmail">chkmail</a> file
+to compile a list of all the available ids and to check each
+one in turn.</p>
 
 <p style="margin-left:11%;"><b>-V</b> Print the version
 details and exit.</p>
