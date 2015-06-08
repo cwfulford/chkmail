@@ -39,7 +39,6 @@ set.</p>
 [<b>-m</b> <i>&lt;#max&gt;</i>] [<b>-n</b> ] [<b>-P</b>
 <i>&lt;passwd&gt;</i>] [<b>-p</b> <i>&lt;port_no&gt;</i>]
 [<b>-u</b> <i>&lt;login_name&gt;</i>] [<b>-v</b> ]
-[<b>-w</b> <i>&lt;#_messages&gt;</i>]
 [<i>config_id&gt;|&quot;ALL&quot;</i>] | [<b>-V</b> ]</p>
 
 <h2 id="heading3">AVAILABILITY
@@ -214,7 +213,7 @@ be over ridden by the value set here.</p>
 
 <p>Notify the user if they have exceeded the warning
 threshold for the number of messages in their mail box (see
-<b>-w</b> option below).</p></td></tr>
+<b>-m</b> option below).</p></td></tr>
 </table>
 
 <p style="margin-left:11%;"><b>-P</b>
@@ -371,7 +370,7 @@ the local syslog facility. A warning will be printed to
 screen if the folder holds more than the default value of
 100.</p>
 
-<pre style="margin-left:22%; margin-top: 1em">chkmail  -v -p 993 -w 1000 -x -n dermot</pre>
+<pre style="margin-left:22%; margin-top: 1em">chkmail  -v -p 993 -m 1000 -x -n dermot</pre>
 
 
 <p style="margin-left:11%; margin-top: 1em">The script will
