@@ -86,6 +86,7 @@ elise:
 	passwd=pasSword4u
 	folders="INBOX.Spam"
 
+fulford@snap.dragon.co.uk:
 fulford-snap:
 	addr=fulford@snap.dragon.co.uk
 	srvr=imap.dougal.roundabout.com
