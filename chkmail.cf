@@ -68,7 +68,7 @@ judy.drench@paddll.co.uk:
 charlie:
 charlie.syelaid@dougal-dog.co.uk:
 	addr=charlie.syelaid@dougal-dog.co.uk
-	max=1000
+	max=1170
 	srvr=imap.dougal.roundabout.com
 	passwd=pasSword4u
 	alert=fulford@fulford.net
