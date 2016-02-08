@@ -179,6 +179,12 @@ marketing:
 	srvr=imap.dougal.roundabout.com
 	passwd=pasSword4u
 
+mjs:
+	addr=fulford
+	srvr=mjs
+	passwd=pasSword4u
+	port=993
+
 natalie-snap:
 	addr=natalie.points@snap.dragon.co.uk
 	srvr=imap.dougal.roundabout.com
