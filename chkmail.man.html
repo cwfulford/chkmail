@@ -288,14 +288,14 @@ file which will be used to determine the values to be used by the script.
 The configuration equates recognised by the scripts are:
 
 <p class="cmdline">
-
+<pre>
 addr      Email address to be checked.
 imap      IMAP server name or IP.
 passwd    Password for the email account.
 alert     Recipient address for alerts.
 warn      Trigger value for e-mail alerts.
 folders   The mailbox folders to be checked.
-</p>
+</pre></p>
 <p class="indent">
 The id "ALL" is special and causes 
 <b>chkmail</b>
@@ -317,9 +317,9 @@ to check each one in turn.
 <p class="indent">
 
 <p class="cmdline">
-
+<pre>
 chkmail flash
-</p>
+</pre></p>
 <p class="indent">
 </p>
 <p class="indent">
@@ -336,11 +336,11 @@ get a count of the messages in the nominated mailbox. If the number of
 messages exceeds the default of 100 a warning is printed to screen.
 
 <p class="cmdline">
-
+<pre>
 chkmail -a arthur.pendragon@camelot.co.uk \\
 <br/>
 -i imap.mailservice.com -l -p password  -m INBOX.Spam 
-</p>
+</pre></p>
 <p class="indent">
 </p>
 <p class="indent">
@@ -357,9 +357,9 @@ returned will be logged using the local syslog facility.  A warning will
 be printed to screen if the folder holds more than the default value of 100.
 
 <p class="cmdline">
-
+<pre>
 chkmail  -v -p 993 -m 1000 -x -n dermot 
-</p>
+</pre></p>
 <p class="indent">
 </p>
 <p class="indent">
