@@ -1,6 +1,6 @@
 <h2 id="heading1">NAME</h2>
 <p class="indent">
-<b>chkmail</b>
+<b><a href="./scripts.php?script=chkmail"><i>chkmail</i></a></b>
 - checks the availability of a mail account on a remote IMAP server and 
 optionally prints and or logs the number of messages in the nominated mailboxes.
 A warning threshold may be set. The mailbox user and/or administrators may
@@ -9,7 +9,7 @@ be advised if the number of messages exceeds the threshold set.
 <h2 id="heading2">SYNOPSIS</h2>
 <p class="indent">
 
-<b>chkmail</b>
+<b><a href="./scripts.php?script=chkmail"><i>chkmail</i></a></b>
 
 [
 <b>-a </b>
@@ -68,13 +68,13 @@ be advised if the number of messages exceeds the threshold set.
 </p>
 <h2 id="heading3">AVAILABILITY</h2>
 <p class="indent">
-<b>chkmail</b>
+<b><a href="./scripts.php?script=chkmail"><i>chkmail</i></a></b>
 is a Bourne shell script which should work equally well on all versions of UNIX,
 Linux and Mac OS X.
 </p>
 <h2 id="heading4">DESCRIPTION</h2>
 <p class="indent">
-<b>chkmail</b>
+<b><a href="./scripts.php?script=chkmail"><i>chkmail</i></a></b>
 uses "
 <b>telnet</b>
 "
@@ -130,11 +130,11 @@ if the mailbox id is used.
 <b>-c</b>&nbsp;&nbsp;&nbsp;
 Use the specified configuration file in preference to the default
 
-<i>"/usr/local/etc/chkmail.cf"</i>
+<i>"/usr/local/etc/<a href="./scripts.php?script=chkmail.cf">chkmail.cf</a>"</i>
 .
 If no configuration file is found the 
 script will attempt to soldier on with whatever information was supplied from
-the command line. If all else fails <b>chkmail will attempt to check</b>
+the command line. If all else fails <b><a href="./scripts.php?script=chkmail"><i>chkmail</i></a> will attempt to check</b>
 "
 <i>INBOX"</i>
  for the user invoking the script. The IMAP server name
@@ -213,11 +213,11 @@ passwords on disc.
 <i>&lt;port_number&gt;</i>
 .
 The ports that
-<b>chkmail</b>
+<b><a href="./scripts.php?script=chkmail"><i>chkmail</i></a></b>
 knows how to handle are 143, 993 and 22.
 
 If port 143 is used 
-<b>chkmail</b>
+<b><a href="./scripts.php?script=chkmail"><i>chkmail</i></a></b>
 will access the mail account using 
 <b>expect </b>
 and
@@ -227,7 +227,7 @@ to send the appropriate
 commands.
 
 If port 993 is selected
-<b>chkmail </b>
+<b><a href="./scripts.php?script=chkmail"><i>chkmail</i></a> </b>
 will try to use
 <b>openssl</b>
 with 
@@ -235,7 +235,7 @@ with
 
 Use of both ports 143 and 993 will be relatively slow and require knowledge of the
 mail account password which may be passed on the command line or stored in
-<b>chkmail.cf.</b>
+<b><a href="./scripts.php?script=chkmail.cf">chkmail.cf</a>.</b>
 Using these options does however have the advantage that no knowledge of the 
 back end mail store architecture is required.
 
@@ -271,12 +271,12 @@ option but it just seemed more intuitive to have both.
 <p class="indent">
 <b>-v</b>&nbsp;&nbsp;&nbsp;
 Set verbose mode on. Without this option 
-<b>chkmail</b>
+<b><a href="./scripts.php?script=chkmail"><i>chkmail</i></a></b>
 reports only on those mail boxes where the number of messages either
 equals or exceeds the trigger value for warnings. With the
 <b>-v</b>&nbsp;&nbsp;&nbsp;
 option 
-<b>chkmail</b>
+<b><a href="./scripts.php?script=chkmail"><i>chkmail</i></a></b>
 always reports the checking of a mail box and the number of messages found.
 </p>
 <p class="indent">
@@ -298,8 +298,8 @@ folders   The mailbox folders to be checked.
 </pre></div>
 <p class="indent">
 The id "ALL" is special and causes 
-<b>chkmail</b>
-to scan the chkmail file to compile a list of all the available  ids and
+<b><a href="./scripts.php?script=chkmail"><i>chkmail</i></a></b>
+to scan the <a href="./scripts.php?script=chkmail"><i>chkmail</i></a> file to compile a list of all the available  ids and
 to check each one in turn.
 </p>
 <p class="indent">
@@ -309,7 +309,7 @@ to check each one in turn.
 </p>
 <h2 id="heading7">FILES</h2>
 <p class="indent">
-<i>chkmail.cf</i>,
+<i><a href="./scripts.php?script=chkmail.cf">chkmail.cf</a></i>,
 <i>msg_cnt</i>,
 <i>msg_del</i>.
 </p>
@@ -318,14 +318,14 @@ to check each one in turn.
 
 </p><div class="cmdline">
 <pre>
-chkmail flash
+<a href="./scripts.php?script=chkmail"><i>chkmail</i></a> flash
 </pre></div>
 <p class="indent">
 </p>
 <p class="indent">
 The id "flash" is looked up in the default configuration file
 
-<i>/usr/local/etc/chkmail.cf</i>
+<i>/usr/local/etc/<a href="./scripts.php?script=chkmail.cf">chkmail.cf</a></i>
 . Using the e-mail account name and 
 password found there, the script calls an 
 <b>expect</b>
@@ -337,7 +337,7 @@ messages exceeds the default of 100 a warning is printed to screen.
 
 </p><div class="cmdline">
 <pre>
-chkmail -a arthur.pendragon@camelot.co.uk \\
+<a href="./scripts.php?script=chkmail"><i>chkmail</i></a> -a arthur.pendragon@camelot.co.uk \\
 <br/>
 -i imap.mailservice.com -l -p password  -m INBOX.Spam 
 </pre></div>
@@ -346,7 +346,7 @@ chkmail -a arthur.pendragon@camelot.co.uk \\
 <p class="indent">
 No configuration id has been given so 
 
-<b>chkmail</b>
+<b><a href="./scripts.php?script=chkmail"><i>chkmail</i></a></b>
 
 will only use the command line options.
 An IMAP login will be attempted 
@@ -358,7 +358,7 @@ be printed to screen if the folder holds more than the default value of 100.
 
 </p><div class="cmdline">
 <pre>
-chkmail  -v -p 993 -m 1000 -x -n dermot 
+<a href="./scripts.php?script=chkmail"><i>chkmail</i></a>  -v -p 993 -m 1000 -x -n dermot 
 </pre></div>
 <p class="indent">
 </p>
@@ -367,7 +367,7 @@ The script will lookup the details for "
 <i>dermot</i>
 " in the default
 configuration file
-<i>/usr/local/etc/chkmail.cf</i>.
+<i>/usr/local/etc/<a href="./scripts.php?script=chkmail.cf">chkmail.cf</a></i>.
 The account will be accessed using 
 <b>SSL</b>
 (secure sockets layer) and the INBOX, together with any folders specified in
@@ -388,15 +388,16 @@ The consequences of unexpected input are untested.
 </p>
 <h2 id="heading9">SEE ALSO</h2>
 <p class="indent">
-<i>chkdf</i>,
-<i>chkftpd</i>,
-<i>chkfw</i>,
-<i>chkup</i>,
+<a href="./scripts.php?script=chkdf&man=y"><i>chkdf</i>,</a>
+<a href="./scripts.php?script=chkftpd&man=y"><i>chkftpd</i>,</a>
+<a href="./scripts.php?script=chkfw&man=y"><i>chkfw</i>,</a>
+<a href="./scripts.php?script=chkup&man=y"><i>chkup</i>,</a>
 <i>msg_cnt</i>,
 <i>msg_del</i>.
 </p>
 <h2 id="heading10">AUTHOR</h2>
 <p class="indent">
 Clifford W Fulford, City Linux. Contact fulford@fulford.net or +44 (0)709 229 5385.
+.SH HISTORY
 </p>
-<h2 id="heading11">HISTORY</h2>
+	
